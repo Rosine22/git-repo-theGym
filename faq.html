@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h2 {
+            font-size: 18px;
+            color: #007BFF;
+            cursor: pointer;
+            margin: 0;
+        }
+        .faq-item p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-item">
+            <h2>What is this website about?</h2>
+            <p>This website provides information about our services and allows you to contact us directly.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h2>How can I contact support?</h2>
+            <p>You can contact support by visiting our <a href="contact.html">Contact Us</a> page and filling out the form.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h2>What services do you offer?</h2>
+            <p>We offer a variety of services tailored to meet your needs, including web design, development, and marketing.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-item h2').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
